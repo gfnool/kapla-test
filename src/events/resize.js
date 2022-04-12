@@ -1,16 +1,5 @@
 import { CustomEvent } from 'kapla';
 
-/**
- * Window resize custom event
- *
- * Call `onResize` with following params:
- *    - {number} width
- *    - {number} height
- *    - {number} ratio (width / heigth)
- *
- * @class MyEvent
- * @extends {CustomEvent}
- */
 class MyEvent extends CustomEvent {
   constructor(...args) {
     super(...args);
@@ -21,6 +10,7 @@ class MyEvent extends CustomEvent {
 
   bind(component, ee) {
     console.log('bind resize event');
+
     const { element } = component.context;
 
     this.eventByElement.set(element, this.callback(component, ee));
@@ -29,6 +19,7 @@ class MyEvent extends CustomEvent {
 
   unbind(component) {
     console.log('unbind resize event');
+
     const { element } = component.context;
 
     window.removeEventListener('resize', this.eventByElement.get(element));

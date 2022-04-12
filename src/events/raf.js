@@ -10,6 +10,7 @@ class MyEvent extends CustomEvent {
 
   bind(component, ee) {
     console.log('bind raf event');
+
     const { element } = component.context;
 
     this.ee = ee;
@@ -24,6 +25,7 @@ class MyEvent extends CustomEvent {
 
   unbind(component, ee) {
     console.log('unbind raf event');
+
     ee.off('raf', this.eventByElement.get(component.context.element));
     window.cancelAnimationFrame(this.raf);
   }

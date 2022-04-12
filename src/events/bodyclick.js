@@ -1,16 +1,5 @@
 import { CustomEvent } from 'kapla';
 
-/**
- * Window resize custom event
- *
- * Call `onResize` with following params:
- *    - {number} width
- *    - {number} height
- *    - {number} ratio (width / heigth)
- *
- * @class MyEvent
- * @extends {CustomEvent}
- */
 class MyEvent extends CustomEvent {
   constructor(...args) {
     super(...args);
