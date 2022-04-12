@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p><a href="index.html">Back to test list</a></p>
+  <p>Foo is a component that has onRaf and onReady methods.</p>
+  <p>Raf and Resize are both global custom events</p>
+  <p>Attach and Remove to see in the console that the onRaf method is still running</p>
+  <p>This does not happen if the custom event is Raf only.</p>
+  <p>
+    <button data-component="add" data-name="foo"></button>
+    <button data-component="remove" data-name="foo"></button>
+  </p>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+}
+
+p pre {
+  display: inline;
+}
+
+button[data-component]::before {
+  content: attr(data-component) " ";
+}
+
+button[data-name]::after {
+  content: attr(data-name);
+  text-transform: uppercase;
+}
