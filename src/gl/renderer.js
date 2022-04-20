@@ -2,7 +2,10 @@ import { mixNoComponent } from 'kapla'
 import { WebGLRenderer } from 'three'
 import app from '../app'
 
-class Renderer extends mixNoComponent(WebGLRenderer) {
+class WebGLRendererWrapper extends WebGLRenderer {
+}
+
+class Renderer extends mixNoComponent(WebGLRendererWrapper) {
   init() {
     console.log('init Renderer');
   }
