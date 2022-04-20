@@ -1,11 +1,7 @@
-import { Application, autoLoad } from 'kapla';
-import { resize, raf, bodyclick } from './events';
+import { autoLoad } from 'kapla'
+import kapla from './app'
 
-const app = Application.start();
+const context = require.context('./components', true, /\.js$/)
 
-const context = require.context('./components', true, /\.js$/);
+kapla.load(autoLoad(context))
 
-app.use('raf', raf);
-app.use('resize', resize);
-app.use('bodyclick', bodyclick);
-app.load(autoLoad(context));
