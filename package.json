@@ -6,7 +6,7 @@
     "build": "webpack"
   },
   "dependencies": {
-    "kapla": "2.1.5"
+    "kapla": "2.1.7"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
